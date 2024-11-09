@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="w-full  py-8 px-0 xl:px-44">
+    <nav className="w-full py-0 xl:py-8 px-0 xl:px-44">
       <div className=" hidden xl:flex text-[#2b2b2b] justify-between  ">
-        <div>Eventist</div>
+        <div>Parsons</div>
         <div className=" pl-0 xl:pl-36">
           <ul className="flex text-[15.5px]  gap-6">
             <Link to="/">
