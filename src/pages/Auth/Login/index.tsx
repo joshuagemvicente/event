@@ -1,3 +1,5 @@
+import LoginForm from "@/components/auth/login/login-form";
+
 export default function LoginPage() {
   // interface IAuth {
   //   authLogo: string;
@@ -11,10 +13,8 @@ export default function LoginPage() {
   // ];
 
   return (
-    <section className="w-full h-full">
-      <div className="min-h-screen flex justify-center items-center">
-        LoginPage
-      </div>
+    <section className="h-full w-full">
+      <LoginForm />
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
   return (
-    <section className="w-full px-12">
+    <section className="w-full">
       <header className="w-full">
         <Navbar />
       </header>

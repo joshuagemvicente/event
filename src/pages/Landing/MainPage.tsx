@@ -1,4 +1,5 @@
 import Hero from "@/components/global/hero";
+import Velocity from "@/components/global/landing-velocity";
 
 export default function MainPage() {
   return (
@@ -6,6 +7,7 @@ export default function MainPage() {
       <div className="px-0 xl:px-12">
         <Hero />
       </div>
+      {/* <Velocity /> */}
     </section>
   );
 }

@@ -11,9 +11,9 @@ export function ModeToggle() {
   return (
     <span className="cursor-pointer" onClick={toggleTheme}>
       {theme === "dark" ? (
-        <Sun className="h-auto w-5 text-yellow-500" />
+        <Sun className="h-auto w-5 text-yellow-500 transition-all hover:text-yellow-300" />
       ) : (
-        <Moon className="h-auto w-5 text-purple-500" />
+        <Moon className="h-auto w-5 text-purple-500 transition-all hover:text-purple-700" />
       )}
       <span className="sr-only">Toggle theme</span>
     </span>
