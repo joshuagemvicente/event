@@ -24,7 +24,7 @@ export default function Hero() {
             className="w-full xl:max-w-4xl text-center font-bold leading-tight text-5xl lg:text-7xl "
             word="Host, Discover, and Enjoy Amazing Events Near You!"
           />
-          <span className="max-w-2xl text-[18.5px] font-normal">
+          <span className="max-w-2xl text-[18px] font-normal">
             Join our community of event creators and attendees. Find events you
             love or host your own and earn rewards for every ticket sold!
           </span>
