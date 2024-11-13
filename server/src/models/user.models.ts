@@ -23,8 +23,12 @@ const userSchema = new Schema<IUser>({
     type: String,
     required: true,
   },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
   canHostEvents: {
-    ype: Boolean,
+    type: Boolean,
     required: false,
   },
   createdAt: {
