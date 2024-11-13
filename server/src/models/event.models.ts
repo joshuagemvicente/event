@@ -1,4 +1,4 @@
-import { model, Schema, Document } from "mongoose";
+import { model, Schema } from "mongoose";
 import { IEvent } from "../interfaces/event.interface";
 
 const eventSchema = new Schema<IEvent>({
