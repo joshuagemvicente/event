@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { IUser } from "../interfaces/user.interface";
+import { IUser, UserRole } from "../interfaces/user.interface";
 
 const userSchema = new Schema<IUser>({
   firstName: {
@@ -23,14 +23,21 @@ const userSchema = new Schema<IUser>({
     type: String,
     required: true,
   },
+  canHostEvents: {
+    ype: Boolean,
+    required: false,
+  },
   createdAt: {
     type: Date,
   },
   updatedAt: {
     type: Date,
   },
+  role: {
+    type: String,
+    enum: Object.values(UserRole),
+    default: UserRole.USER,
+  },
 });
 
-const User = model<IUser>("User", userSchema);
-
-export default { User };
+export const User = model<IUser>("User", userSchema);
