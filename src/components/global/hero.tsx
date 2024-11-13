@@ -41,8 +41,8 @@ export default function Hero() {
         </div>
         <div>
           <p className="">
-            Yes it is free to host an event,{" "}
-            <span className="font-bold">100% FREE</span>{" "}
+            Yes it's free to host an event,{" "}
+            <span className="font-bold text-xl underline">100% FREE</span>{" "}
           </p>
         </div>
       </div>

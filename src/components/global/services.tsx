@@ -5,34 +5,47 @@ import {
   CardTitle,
   CardContent,
   CardDescription,
-  CardFooter,
 } from "../ui/card";
+import { Telescope, Hotel, Tickets } from "lucide-react";
 
-interface ServicesProps {
+type Services = {
+  serviceIcon: React.ReactNode;
   serviceName: string;
   serviceDescription: string;
-  serviceIcon: string;
-}
+};
 
-const servicesArray: ServicesProps[] = [
+const servicesArray: Services[] = [
   {
-    serviceName: "Web Development",
-    serviceDescription: "Web Development",
-    serviceIcon: "Web Development",
+    serviceIcon: <Telescope size={50} />,
+    serviceName: "Discover and Join Events!",
+    serviceDescription:
+      "Find events tailored to your interests, whether they’re local meetups, virtual conferences, or exclusive workshops. Filter by category, location, date, or price to quickly find the right event for you.",
+  },
+  {
+    serviceIcon: <Hotel size={50} />,
+    serviceName: "Host and Manage Events!",
+    serviceDescription:
+      "Empower yourself as an organizer with tools to create, customize, and manage events. From small gatherings to large-scale conferences, design events that suit your needs with customizable options and easy ticket management.",
+  },
+  {
+    serviceIcon: <Tickets size={50} />,
+    serviceName: "Secure Booking and Ticketing!",
+    serviceDescription:
+      "Join events seamlessly with our easy and secure booking system. For paid events, we offer a reliable payment gateway so you can book your spot without hassle. Your ticket is just a few clicks away!",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="w-full px-12 lg:px-28">
+    <section className="w-full  px-12 lg:px-28">
       <div className="flex flex-col">
         <div className="text-left">
-          <h3 className="text-3xl font-bold">01 | Services</h3>
+          <h3 className="text-2xl lg:text-3xl font-bold">01 | Services</h3>
         </div>
-        <div>
+        <div className="py-12 w-full h-full grid grid-cols-1 lg:grid-cols-3 gap-4">
           {servicesArray.map((service, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-3">
-              <ServicesCard />
+            <div key={index} className="">
+              <ServicesCard key={index} services={service} />
             </div>
           ))}
         </div>
@@ -41,18 +54,17 @@ export default function Services() {
   );
 }
 
-export const ServicesCard = ({
-  serviceName,
-  serviceDescription,
-  serviceIcon,
-}: ServicesProps) => {
+export const ServicesCard = ({ services }: { services: Services }) => {
   return (
-    <Card className="">
-      <CardHeader>
-        <CardTitle>{serviceName}</CardTitle>
+    <Card className="h-full w-auto">
+      <CardHeader className="flex flex-col justify-center items-center ">
+        <span className="">{services.serviceIcon}</span>
+        <CardTitle className="text-xl">{services.serviceName}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <CardDescription>{serviceDescription}</CardDescription>
+      <CardContent className="">
+        <CardDescription className="text-justify">
+          {services.serviceDescription}
+        </CardDescription>
       </CardContent>
     </Card>
   );
