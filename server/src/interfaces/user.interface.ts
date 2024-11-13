@@ -7,4 +7,5 @@ export interface IUser {
   phoneNumber: string;
   createdAt: Date;
   updatedAt: Date;
+  role: string[];
 }

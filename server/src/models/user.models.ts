@@ -17,6 +17,7 @@ const userSchema = new Schema<IUser>({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -30,5 +31,6 @@ const userSchema = new Schema<IUser>({
   },
 });
 
-
 const User = model<IUser>("User", userSchema);
+
+export default { User };
