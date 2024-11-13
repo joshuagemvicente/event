@@ -37,12 +37,12 @@ const servicesArray: Services[] = [
 
 export default function Services() {
   return (
-    <section className="w-full px-12 lg:px-28">
+    <section className="w-full py-12 px-12 lg:px-28">
       <div className="flex flex-col">
         <div className="text-left">
-          <h3 className="text-2xl lg:text-4xl font-bold">01 | Services</h3>
+          <h3 className="text-3xl lg:text-4xl font-bold">01 | Services</h3>
         </div>
-        <div className="py-12 w-full h-full grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="py-12 px-0 xl:px-12 w-full h-full grid grid-cols-1 xl:grid-cols-3 gap-4">
           {servicesArray.map((service, index) => (
             <div key={index} className="">
               <ServicesCard key={index} services={service} />
@@ -59,10 +59,10 @@ export const ServicesCard = ({ services }: { services: Services }) => {
     <Card className="h-full w-auto">
       <CardHeader className="flex flex-col justify-center items-center ">
         <span className="">{services.serviceIcon}</span>
-        <CardTitle className="text-xl">{services.serviceName}</CardTitle>
+        <CardTitle className="text-2xl">{services.serviceName}</CardTitle>
       </CardHeader>
       <CardContent className="">
-        <CardDescription className="text-justify">
+        <CardDescription className="text-justify text-[13.5px]">
           {services.serviceDescription}
         </CardDescription>
       </CardContent>

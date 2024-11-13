@@ -1,3 +1,4 @@
+import Benefits from "@/components/global/benefits";
 import Hero from "@/components/global/hero";
 import Services from "@/components/global/services";
 
@@ -7,6 +8,7 @@ export default function MainPage() {
       <div className="px-0 xl:px-12">
         <Hero />
         <Services />
+        <Benefits />
       </div>
 
       {/* <Velocity /> */}
