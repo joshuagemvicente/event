@@ -57,7 +57,7 @@ export default function Services() {
 export const ServicesCard = ({ services }: { services: Services }) => {
   return (
     <Card className="h-full w-auto">
-      <CardHeader className="flex flex-col justify-center items-center ">
+      <CardHeader className="flex flex-col  ">
         <span className="">{services.serviceIcon}</span>
         <CardTitle className="text-2xl">{services.serviceName}</CardTitle>
       </CardHeader>

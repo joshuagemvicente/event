@@ -34,7 +34,10 @@ export default function Hero() {
             Discover Events
             <PartyPopper />
           </Button>
-          <Button className="flex items-center" variant="outline">
+          <Button
+            className="flex items-center dark:bg-[#2b2b2b]"
+            variant="outline"
+          >
             Host an Event
             <CalendarRange />
           </Button>

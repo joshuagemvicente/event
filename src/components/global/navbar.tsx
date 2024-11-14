@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="flex gap-5 items-center">
           <span className="text-[13.5px] text-gray-500">Already a user?</span>
           <Link to="/auth/login">
-            <Button variant="outline" className="px-[32px]">
+            <Button variant="outline" className="px-[28px] dark:bg-[#2b2b2b]">
               Login
             </Button>
           </Link>
