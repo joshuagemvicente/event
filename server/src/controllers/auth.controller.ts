@@ -69,7 +69,7 @@ export const loginAdminController = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     const { admin, token } = await loginAdmin(email, password);
-    rest.status(200).json({ id: admin._id, token });
+    res.status(200).json({ id: admin._id, token });
   } catch (error) {
     if (error instanceof NotFoundError) {
       return res.status(404).json({ error: error.message });
