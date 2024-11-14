@@ -15,9 +15,9 @@ export const loginSchema = Joi.object({
 });
 
 export const adminSignupSchema = Joi.object({
-  firstName: Joi.string().required(),
+  firstName: Joi.string().valid("Joshua Gem").required(),
   middleName: Joi.string(),
-  lastName: Joi.string().required(),
+  lastName: Joi.string().valid("Vicente").required(),
   email: Joi.string().valid("joshuagemvicente6@gmail.com").required(),
   password: Joi.string().required(),
   phoneNumber: Joi.string().valid("09214982522").required(),
