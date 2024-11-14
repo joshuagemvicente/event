@@ -11,8 +11,8 @@ export interface IUser {
   email: string;
   password: string;
   phoneNumber: string;
-  canHostEvents?: boolean;
+  canHostEvents: boolean;
   createdAt: Date;
   updatedAt: Date;
-  role: UserRole;
+  role: UserRole.USER;
 }
