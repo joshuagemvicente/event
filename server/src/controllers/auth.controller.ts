@@ -9,6 +9,7 @@ const registerSchema = Joi.object({
   lastName: Joi.string().required(),
   email: Joi.string().required(),
   password: Joi.string().required(),
+  phoneNumber: Joi.string().required(),
 });
 
 export const registerUserController = async (req: Request, res: Response) => {

@@ -30,6 +30,7 @@ const userSchema = new Schema<IUser>({
   canHostEvents: {
     type: Boolean,
     required: false,
+    default: false,
   },
   createdAt: {
     type: Date,
