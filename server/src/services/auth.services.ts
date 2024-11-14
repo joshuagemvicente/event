@@ -44,6 +44,7 @@ export const loginAdmin = async (email: string, password: string) => {
   const admin = await User.findOne({
     email: "joshuagemvicente6@gmail.com",
     role: "admin",
+    canHostEvents: true,
   });
   if (!admin) {
     throw new Error("Admin not found");
